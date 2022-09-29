@@ -1,0 +1,17 @@
+{
+  "name": "backend0926",
+  "version": "1.0.0",
+  "description": "A backend for our car maintenance web application",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Postlmayr",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.20",
+    "pg": "^8.8.0"
+  }
+}
