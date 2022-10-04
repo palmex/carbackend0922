@@ -25,7 +25,7 @@ testRouter.get('/async', (req,res) =>{
         console.log(result)
         res.status(200).json(result)
     })
-    res.status(200).json({"response": "rightaway"})
+    console.log("after query")
 })
 
 testRouter.post('/', (req,res) =>{
