@@ -7,9 +7,12 @@ const db = require('../db')
 testRouter.use(express.json())
 
 testRouter.get('/', (req,res) =>{
+
     res.json({
         "test": "route endpoint 1"
     })
+
+
 })
 
 testRouter.get('/async', (req,res) =>{
