@@ -75,14 +75,12 @@ describe('Our server', function() {
             .expect('Content-Type', /json/)
             .expect(200, function(err, res) {
               if (err) { return done(err); }
-              callStatus = res.body.car_id;
+              callStatus = res.body;
             //   expect = chai
-              expect(callStatus).to.not.equal('');
+              console.log(callStatus)
+              expect(callStatus).to.not.equal(null);
               // Done
               done();
             });
         });
-    
-       
-      
       });
