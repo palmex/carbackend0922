@@ -1,4 +1,6 @@
 const express = require('express')
+
+
 var carsRouter = express.Router()
 
 const db = require('../db')
@@ -6,7 +8,7 @@ carsRouter.use(express.json())
 
 // GET ALL CARS
 carsRouter.get('/all', (req,res) =>{
-    console.log('admin header:', req.headers.admin)
+    // console.log('admin header:', req.headers.admin)
     if (req.headers.admin){
         queryStatement = 'SELECT * FROM cars;'
         var result = ""
@@ -53,6 +55,7 @@ carsRouter.delete('/:carId', (req,res) =>{
     // res.status(200).json({"success":"get car id "+ req.params.carId})
 })
 
+// UPDATE CAR WITH CAR_ID
 carsRouter.put('/:carId', (req,res) =>{
     console.log('car id:', req.params.carId)
     var make =  req.body.make
@@ -73,7 +76,7 @@ const dbQuery = (queryStatement, request, response ) => {
         if (error) {
             response.status(500).json(error)
         }
-        console.log(results)
+        // console.log(results)
         result = results.rows
         response.status(200).json(result)
     })
