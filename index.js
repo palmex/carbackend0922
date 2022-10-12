@@ -2,6 +2,7 @@ const express = require('express')
 const path = require('path')
 const testRouter = require('./routes/test')
 const carsRouter = require('./routes/cars')
+const usersRouter = require('./routes/users')
 
 var request = require('supertest');
 const assert = require('assert');
@@ -13,6 +14,7 @@ const port = 3000
 
 app.use('/test', testRouter)
 app.use('/cars', carsRouter)
+app.use('/users', usersRouter)
 app.use(express.json())
 app.use(
     express.urlencoded({
