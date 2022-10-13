@@ -9,9 +9,12 @@ const assert = require('assert');
 // install mocha globally
 var expect = require('chai').expect;
 
+const cors = require('cors') 
+
 const app = express()
 const port = 3000
 
+app.use(cors())
 app.use('/test', testRouter)
 app.use('/cars', carsRouter)
 app.use('/users', usersRouter)
